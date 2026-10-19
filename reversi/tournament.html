@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reversi · 正式赛归档</title><link rel="stylesheet" href="./dashboard.css"><link rel="stylesheet" href="./tournament.css?v=elo-ranges-1"></head>
+<body><main>
+<header class="masthead"><div><div class="eyebrow">BOTZONE / REVERSI</div><h1>黑白棋 · 正式赛归档</h1><p>五个提交版本与 Sirius、Lumen，四桌并行。<a href="./index.html">Agent 观察室</a></p></div><div class="connection"><span id="signal"></span><b id="connection">连接赛场</b><small id="updated">等待更新</small></div></header>
+<section class="overview" aria-label="赛事进度"><div><span>已完成</span><strong id="completed">— <small>/ 640</small></strong></div><div><span>正在对局</span><strong id="active">— <small>/ 4 桌</small></strong></div><div title="黑方胜率 =黑方胜场 ÷ 已完成场次"><span>黑方胜率</span><strong id="black-win-rate">—</strong></div><div title="白方胜率 =白方胜场 ÷ 已完成场次"><span>白方胜率</span><strong id="white-win-rate">—</strong></div><div><span>比赛速度</span><strong id="rate">— <small>局 / 分钟</small></strong></div><div><span>预计剩余</span><strong id="eta">— <small>分钟</small></strong></div><div class="track"><div id="progress"></div></div></section>
+<div class="layout"><section id="tables" class="archive-match-list panel"><div class="panel-title"><h2>全部对局</h2><span>640 局 · 点击回放</span></div><label>筛选选手 <select id="match-filter"><option value="">全部</option></select></label><div id="all-matches"></div></section>
+<aside><section class="panel standings"><div class="panel-title"><h2>选手排名</h2><span>按平均 Elo 排序</span></div><div class="rank-scroll"><table><thead><tr><th># / 选手</th><th>平均 Elo</th><th>胜 / 平 / 负</th><th>胜率</th><th>连胜 / 连败</th><th>场次</th></tr></thead><tbody id="rankings"></tbody></table></div><p class="hint">全部对局乱序重算 1024 次取平均；每次从 1000 分起，K=32。点击 bot 查看详细统计。</p><div id="player-detail" class="player-detail" hidden></div></section>
+<section class="panel results"><div class="panel-title"><h2>最近完赛</h2><span>实际完赛顺序</span></div><div id="recent"></div></section>
+<section class="panel matchups"><div class="panel-title"><h2>相互战绩</h2><span>行对列 · 胜 / 平 / 负</span></div><table id="matchup-table" aria-label="相互对局结果"></table></section>
+<section class="panel elo-ranges"><div class="panel-title"><h2>Elo 范围</h2><span>1024 次乱序 · 最低—最高，圆点为平均</span></div><div id="elo-ranges"></div></section>
+<details class="panel rules"><summary>计分与赛程</summary><p>7 个 bot，排除 Sirius 对 Lumen，共 20 对；每对 32 局、黑白各 16 局，共 640 局，全局打乱顺序。</p><p>首步截止 2.5 秒，后续 1.5 秒，4 桌并行；标准开局，确定性程序可能重复棋谱。</p><p id="color-adjustment">胜 / 和 / 负计 2 / 1 / 0；故障局记分并保留原因。</p></details></aside></div>
+<footer>复用 Ataxx 四桌赛场、棋盘与动画，适配黑白棋规则。所有对局均保存完整记录。<span id="footer-status"></span></footer>
+</main><script src="./tournament.js?v=elo-ranges-1"></script></body></html>

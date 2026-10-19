@@ -1,0 +1,24 @@
+/* Preserve the existing dashboard placement and responsive breakpoints. */
+aside>.results{display:flex;flex-direction:column;overflow:hidden;box-sizing:border-box}
+.results #recent{flex:1;min-height:0;max-height:none;overflow-y:auto}
+@media(min-width:641px) and (max-width:1200px){aside{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+
+.matchups{grid-column:1/-1}
+#matchup-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:11px;font-variant-numeric:tabular-nums}
+#matchup-table th,#matchup-table td{padding:9px 2px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}
+#matchup-table th{font-size:10px;font-weight:600}
+#matchup-table th:first-child{text-align:left}
+.matchup-diagonal,.matchup-excluded{color:var(--muted);background:#f5f7f2}
+
+.elo-ranges{grid-column:1/-1}
+.elo-range-row{padding:8px 0;border-bottom:1px solid var(--line)}
+.elo-range-label{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:12px}
+.elo-range-label small{font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+.elo-range-track{position:relative;height:20px;margin:3px 0;background:repeating-linear-gradient(to right,transparent 0,transparent calc(25% - 1px),#dce2df88 calc(25% - 1px),#dce2df88 25%)}
+.elo-range-line{position:absolute;top:8px;height:4px;background:#91ad9f;border-radius:2px}
+.elo-range-line:before,.elo-range-line:after{content:'';position:absolute;top:-3px;width:2px;height:10px;background:#537c69}
+.elo-range-line:before{left:0}.elo-range-line:after{right:0}
+.elo-range-mean{position:absolute;top:5px;width:10px;height:10px;transform:translateX(-50%);border-radius:50%;background:#285c49;box-shadow:0 0 0 2px var(--paper)}
+.elo-range-axis{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);padding-top:4px}
+
+.archive-match-list{min-width:0;align-self:start}#all-matches{max-height:1100px;overflow:auto;margin-top:12px}.archive-game{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:center}.archive-game a{flex:1;color:var(--green)}.archive-game small{color:var(--muted)}select{font:inherit;padding:5px} .layout>aside{min-width:0} .embedded-tournament .masthead{display:none}

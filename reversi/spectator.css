@@ -1,0 +1,6 @@
+/* Sizing only. The existing viewer retains its board, pieces, and animations. */
+.embed .arena-stage{height:100vh;min-height:0;padding:12px 22px 9px;background:radial-gradient(ellipse at center,#eee 0%,#c9c9c9 60%,#aaa 100%);border:0}
+.embed .board-wrap{width:min(calc(100vw - 44px),calc(100vh - 85px));max-width:640px}
+.embed .players{width:min(calc(100vw - 44px),calc(100vh - 85px));max-width:640px;margin-bottom:9px}
+.embed .player{height:26px}.embed .status{display:none}
+.embed .player .name{font-size:12px}.embed .board{gap:4px}
