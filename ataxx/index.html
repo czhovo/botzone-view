@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>同化棋 · Agent 观察室</title><link rel="stylesheet" href="./agents.css?v=tournament-midgame-3"></head>
+<body><main>
+<nav id="participants" aria-label="选择参与者"></nav>
+<section id="tournament-page" hidden><iframe id="tournament-frame" title="同化棋正式赛场"></iframe></section>
+<section class="time-panel"><div class="section-title"><h2>开发时间线</h2><div><strong id="elapsed">未开始</strong></div></div>
+<div class="time-scroll"><div class="time-axis" id="time-axis"><div class="grace-band"></div><div class="axis-line"></div><div id="event-points"></div><div id="time-dot" class="time-dot" hidden><img id="time-character" alt="当前开发进度"></div><div class="ticks"><span style="left:0%">0</span><span style="left:15%">30</span><span style="left:30%">60</span><span style="left:45%">90</span><span style="left:60%">120</span><span style="left:75%">150</span><span class="deadline-tick" style="left:90%">180</span><span class="end-tick" style="left:100%">200</span></div></div></div>
+<p id="phase-note" class="hint"></p><div id="event-detail" class="event-detail"></div>
+</section>
+<div class="algorithm-and-tokens"><section class="panel algorithms"><div class="section-title"><div><h2>算法演进</h2></div><span id="version-count">0 个程序版本</span></div><div id="decisions" class="history-content"></div>
+</section>
+<section class="panel token-panel"><div class="section-title"><h2>Token 用量</h2></div><div id="usage">尚无用量记录</div></section></div>
+<section class="panel current-work-panel"><div class="section-title"><h2>工作摘要</h2></div><div id="current-work" class="history-content">等待启动</div></section>
+<section class="panel experiments"><div class="section-title"><div><h2>测试项目</h2></div><span id="game-count">0 局记录</span></div><div id="test-projects"></div>
+<div class="section-title board-navigation"><span>测试棋盘</span><div><button id="board-prev">上一页</button><span id="board-page">0 / 0</span><button id="board-next">下一页</button></div></div><div id="boards" class="boards"></div>
+<div class="test-data"><section><h3>开发自测统计</h3><div class="scroll"><table><thead><tr><th>序号</th><th>对战各方</th><th>开始时间</th><th>用时</th><th>局数</th><th>前者胜 / 平 / 后者胜</th><th>前者胜率</th><th>故障</th></tr></thead><tbody id="test-stats"></tbody></table></div></section></div>
+<details class="recent-results"><summary>对局记录</summary><div id="record-pager" class="record-pager"></div><div class="scroll history-content" id="result-scroll"><table><thead><tr><th>序号</th><th>对局双方</th><th>开始时间</th><th>用时</th><th>类型</th><th>结果</th><th>故障</th></tr></thead><tbody id="results"></tbody></table></div></details>
+</section>
+
+<footer class="archive-links"><a href="https://github.com/czhovo/botzone-view/blob/main/ataxx/reports/README.md" target="_blank" rel="noopener">报告文档</a> · <a href="https://github.com/czhovo/botzone-view/blob/main/ataxx/README.md" target="_blank" rel="noopener">归档说明</a></footer></main><script src="./agents.js?v=tournament-midgame-3"></script></body></html>
